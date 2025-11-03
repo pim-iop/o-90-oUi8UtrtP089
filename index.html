@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bingo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bingo</h1>
+
+  <div id="setup">
+    <label>Select your player number: </label>
+    <select id="player-select">
+      <option value="1">Player 1</option>
+      <option value="2">Player 2</option>
+      <option value="3">Player 3</option>
+      <option value="4">Player 4</option>
+    </select>
+    <button id="start-btn">Start Game</button>
+  </div>
+
+  <div id="game-area" style="display:none;">
+    <h2 id="called-word">Press "Call Word" to Start!</h2>
+    <button id="call-word">Call Word</button>
+    <button id="sound-ding">Play Ding 🔔</button>
+    <button id="sound-cheer">Play Cheer 🎉</button>
+
+    <div class="player-board">
+      <h3 id="player-name"></h3>
+      <div id="grid" class="grid"></div>
+    </div>
+  </div>
+
+  <div id="leaderboard">
+    <h2>🏆 Leaderboard</h2>
+    <ul id="scores">
+      <li>Player 1: 0</li>
+      <li>Player 2: 0</li>
+      <li>Player 3: 0</li>
+      <li>Player 4: 0</li>
+    </ul>
+  </div>
+
+  <audio id="ding-sound" src="https://freesound.org/data/previews/341/341695_3248244-lq.mp3"></audio>
+  <audio id="cheer-sound" src="https://freesound.org/data/previews/276/276020_4486188-lq.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
